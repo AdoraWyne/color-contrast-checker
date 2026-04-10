@@ -2,11 +2,11 @@ function getNormaliseValue(value: number): number{
     return value/255
 }
 
-function getLinearizeValue(value){
+function getLinearizeValue(value: number): number{
     return value <= 0.03928 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4
 }
 
-export function getLuminanceValue(rgbValue){
+export function getLuminanceValue(rgbValue: string): number{
     const values = rgbValue
                     .slice(4, -1)
                     .split(",")

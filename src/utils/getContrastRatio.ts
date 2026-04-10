@@ -1,4 +1,4 @@
-export function getContrastRatio(l1,l2){
+export function getContrastRatio(l1: number,l2: number): number{
     const L_lighter = l1 > l2 ? l1 : l2
     const L_darker = l1 < l2 ? l1 : l2
 
