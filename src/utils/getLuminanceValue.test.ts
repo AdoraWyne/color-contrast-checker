@@ -6,4 +6,9 @@ describe("getLuminanceValue", () => {
         const output = 0.36700000000000004
         expect(getLuminanceValue(input)).toBeCloseTo(output, 3)
     })
+
+    it("edge case", () => {
+        const input = "rgb(255"
+        expect(getLuminanceValue(input)).toBeNaN()
+    })
 })
