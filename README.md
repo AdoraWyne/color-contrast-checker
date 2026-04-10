@@ -1,6 +1,17 @@
 # Goal
 
 - To understand how color contrast is calculated and the WCAG value for each color contrast.
+- Inspired from [this website](https://webaim.org/resources/contrastchecker/).
+
+# Improvement / TODO
+
+- Add HEX number for input and colour picker.
+    - Optional: swap the colour between background and foreground.
+- Data input validation
+- Render example with text size & color and background color visual in WCAG section.
+- Componentise App.tsx.
+- Style it nicely 💕
+
 
 ## Calculating Relative Luminance
 
@@ -92,3 +103,10 @@ L_white = 1.0
  
 ratio = (1.0 + 0.05) / (0.3557 + 0.05) = 2.59
 ```
+
+---
+
+# Mics Learning
+
+- When comparing calculated decimal values in test, -> `toBeCloseTo()`
+- Another standard to check color contrast test is APCA, [checker here](https://polypane.app/color-contrast/#fg=%23107db5&bg=%23fff&level=aa&format=rgb&algo=APCA&filter=none).
