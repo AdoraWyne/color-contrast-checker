@@ -15,7 +15,12 @@ function App() {
 
   return (
     <>
+    <h1>Color Contrast Checker</h1>
+
+    <div><hr /></div>
+
     <div>
+      <h2>Color Input</h2>
       <div>
       <label>
         Background RGB:{' '}
@@ -41,12 +46,15 @@ function App() {
       <small>RGB Color Example: rgb(255,255,255)</small>
     </div>
 
-    <hr />
+    <div><hr /></div>
     
     <div>
+      <h2>Contrast Ratio</h2>
       <p>Contrast Ratio: {(isNaN(backgroundLuminanceValue) || isNaN(foregroundLuminanceValue)) ? "Enter valid RGB values 🐖" : contrastRatio}</p>
     </div>
     
+    <div><hr /></div>
+
     <div>
       <h2>WCAG 2.0 Test</h2>
       <p>Normal Text <small>(under 18pt (24px) regular weight, or under 14pt (18.66px) bold)</small></p>
