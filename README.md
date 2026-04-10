@@ -67,3 +67,28 @@ L = 0.3557
 ```
 
 A luminance of ~0.36 — a mid-brightness colour leaning darker.
+
+## Calculating Contrast Ratio
+ 
+Scale: `1:1` (identical) → `21:1` (black vs white).
+ 
+### Formula
+ 
+```
+ratio = (L_lighter + 0.05) / (L_darker + 0.05)
+```
+ 
+- `L_lighter` — higher luminance
+- `L_darker` — lower luminance
+- `0.05` — prevents division by zero when `L = 0`
+ 
+### Example
+ 
+`rgb(100, 180, 50)` on white:
+ 
+```
+L_fg    = 0.3557
+L_white = 1.0
+ 
+ratio = (1.0 + 0.05) / (0.3557 + 0.05) = 2.59
+```
