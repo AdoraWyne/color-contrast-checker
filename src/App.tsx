@@ -15,21 +15,24 @@ function App() {
       <label>
         Background RGB:{' '}
         <input
+          onBlur={handleBlur}
+          onChange={(e) => setBackgroundRGB(e.target.value)}
+          placeholder="rgb(255,255,255)"
           type="text"
           value={backgroundRGB}
-          onChange={(e) => setBackgroundRGB(e.target.value)}
-          onBlur={handleBlur}
         />
       </label>
       <label>
         Foreground RGB:{' '}
         <input
+          onBlur={handleBlur}
+          onChange={(e) => setForegroundRGB(e.target.value)}
+          placeholder="rgb(0,0,0)"
           type="text"
           value={foregroundRGB}
-          onChange={(e) => setForegroundRGB(e.target.value)}
-          onBlur={handleBlur}
         />
       </label>
+      <small>RGB Color Example: rgb(255,255,255)</small>
     </>
   );
 }
