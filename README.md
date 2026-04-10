@@ -3,6 +3,10 @@
 - To understand how color contrast is calculated and the WCAG value for each color contrast.
 - Inspired from [this website](https://webaim.org/resources/contrastchecker/).
 
+# Demo
+
+![Demo of this app](image.png)
+
 # Improvement / TODO
 
 - Add HEX number for input and colour picker.
