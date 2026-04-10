@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <h1>Color Contrast Checker j</h1>
+      <h1>Color Contrast Checker</h1>
 
       <div>
         <hr />
