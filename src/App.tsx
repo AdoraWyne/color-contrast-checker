@@ -72,7 +72,15 @@ function App() {
               <th>Passes</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody>
+            {WCAGResult.map((row) => (
+              <tr key={row.level}>
+                <td>{row.level}</td>
+                <td>{row.minContrast}:1</td>
+                <td>{row.passes ? "Yes" : "No"}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </>
