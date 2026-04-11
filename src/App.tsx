@@ -2,14 +2,14 @@ import { useState } from "react";
 import { getLuminanceValue } from "./utils/getLuminanceValue";
 import { getContrastRatio } from "./utils/getContrastRatio";
 import { WCAGTest } from "./utils/WCAGTest";
+import { hexToRgb } from "./utils/hexToRgb";
 
 function App() {
-  const [backgroundRGB, setBackgroundRGB] =
-    useState<string>("rgb(255,255,255)");
-  const [foregroundRGB, setForegroundRGB] = useState("rgb(0,0,0)");
+  const [backgroundHex, setBackgroundHex] = useState<string>("#FFFFFF");
+  const [foregroundHex, setForegroundHex] = useState("#000000");
 
-  const backgroundLuminanceValue = getLuminanceValue(backgroundRGB);
-  const foregroundLuminanceValue = getLuminanceValue(foregroundRGB);
+  const backgroundLuminanceValue = getLuminanceValue(hexToRgb(backgroundHex));
+  const foregroundLuminanceValue = getLuminanceValue(hexToRgb(foregroundHex));
   const contrastRatio = getContrastRatio(
     backgroundLuminanceValue,
     foregroundLuminanceValue,
@@ -28,27 +28,24 @@ function App() {
         <h2>Color Input</h2>
         <div>
           <label>
-            Background RGB:{" "}
+            Background Color:{" "}
             <input
-              onChange={(e) => setBackgroundRGB(e.target.value)}
-              placeholder="rgb(255,255,255)"
-              type="text"
-              value={backgroundRGB}
+              onChange={(e) => setBackgroundHex(e.target.value)}
+              type="color"
+              value={backgroundHex}
             />
           </label>
         </div>
         <div>
           <label>
-            Foreground RGB:{" "}
+            Foreground Color:{" "}
             <input
-              onChange={(e) => setForegroundRGB(e.target.value)}
-              placeholder="rgb(0,0,0)"
-              type="text"
-              value={foregroundRGB}
+              onChange={(e) => setForegroundHex(e.target.value)}
+              type="color"
+              value={foregroundHex}
             />
           </label>
         </div>
-        <small>RGB Color Example: rgb(255,255,255)</small>
       </div>
 
       <div>
@@ -57,12 +54,7 @@ function App() {
 
       <div>
         <h2>Contrast Ratio</h2>
-        <p>
-          Contrast Ratio:{" "}
-          {isNaN(backgroundLuminanceValue) || isNaN(foregroundLuminanceValue)
-            ? "Enter valid RGB values 🐖"
-            : contrastRatio}
-        </p>
+        <p>Contrast Ratio: {contrastRatio}</p>
       </div>
 
       <div>
