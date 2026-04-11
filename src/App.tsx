@@ -28,7 +28,7 @@ function App() {
 
       <div>
         <h2>Color Input</h2>
-        <div>
+        <div style={{ display: "flex", gap: "1rem" }}>
           <label>
             Background Color:{" "}
             <input
@@ -37,8 +37,6 @@ function App() {
               value={backgroundHex}
             />
           </label>
-        </div>
-        <div>
           <label>
             Foreground Color:{" "}
             <input
