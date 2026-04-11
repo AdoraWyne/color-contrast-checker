@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getLuminanceValue } from "./utils/getLuminanceValue";
 import { getContrastRatio } from "./utils/getContrastRatio";
 import { WCAGTest } from "./utils/WCAGTest";
+import { WCAG_ROWS_PRESENTATION } from "./utils/WCAGRowsConfig";
 import { hexToRgb } from "./utils/hexToRgb";
 
 function App() {
@@ -73,13 +74,25 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            {WCAGResult.map((row) => (
-              <tr key={row.level}>
-                <td>{row.level}</td>
-                <td>{row.minContrast}:1</td>
-                <td>{row.passes ? "Yes" : "No"}</td>
-              </tr>
-            ))}
+            {WCAGResult.map((row) => {
+              const presentation = WCAG_ROWS_PRESENTATION[row.level];
+              return (
+                <tr key={row.level}>
+                  <td>{row.level}</td>
+                  <td
+                    style={{
+                      ...presentation.previewStyle,
+                      backgroundColor: backgroundHex,
+                      color: foregroundHex,
+                    }}
+                  >
+                    {presentation.previewText}
+                  </td>
+                  <td>{row.minContrast}:1</td>
+                  <td>{row.passes ? "Yes" : "No"}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
