@@ -28,7 +28,7 @@ function App() {
 
       <div>
         <h2>Color Input</h2>
-        <div style={{ display: "flex", gap: "1rem" }}>
+        <div className="color-input">
           <label>
             Background Color:{" "}
             <input

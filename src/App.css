@@ -1,3 +1,8 @@
+.color-input {
+  display: flex;
+  gap: 2rem;
+}
+
 .wcag-table {
   border-collapse: collapse;
 }
