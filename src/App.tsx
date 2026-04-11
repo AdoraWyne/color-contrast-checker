@@ -23,10 +23,6 @@ function App() {
       <h1>Color Contrast Checker</h1>
 
       <div>
-        <hr />
-      </div>
-
-      <div>
         <h2>Color Input</h2>
         <div className="color-input">
           <label>
@@ -49,16 +45,8 @@ function App() {
       </div>
 
       <div>
-        <hr />
-      </div>
-
-      <div>
         <h2>Contrast Ratio</h2>
         <p>Contrast Ratio: {contrastRatio}</p>
-      </div>
-
-      <div>
-        <hr />
       </div>
 
       <div>
