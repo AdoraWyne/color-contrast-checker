@@ -63,7 +63,17 @@ function App() {
 
       <div>
         <h2>WCAG 2.0 Test</h2>
-        <pre>{JSON.stringify(WCAGResult, null, 2)}</pre>
+        <table>
+          <thead>
+            <tr>
+              <th>WCAG 2.0</th>
+              <th>Preview</th>
+              <th>Min. contrast</th>
+              <th>Passes</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </>
   );
