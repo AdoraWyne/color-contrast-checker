@@ -23,12 +23,8 @@ function App() {
       <h1>Color Contrast Checker</h1>
 
       <div>
-        <hr />
-      </div>
-
-      <div>
         <h2>Color Input</h2>
-        <div>
+        <div className="color-input">
           <label>
             Background Color:{" "}
             <input
@@ -37,8 +33,6 @@ function App() {
               value={backgroundHex}
             />
           </label>
-        </div>
-        <div>
           <label>
             Foreground Color:{" "}
             <input
@@ -51,16 +45,8 @@ function App() {
       </div>
 
       <div>
-        <hr />
-      </div>
-
-      <div>
         <h2>Contrast Ratio</h2>
         <p>Contrast Ratio: {contrastRatio}</p>
-      </div>
-
-      <div>
-        <hr />
       </div>
 
       <div>

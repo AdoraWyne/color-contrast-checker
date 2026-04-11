@@ -9,12 +9,10 @@
 
 # Improvement / TODO
 
-- Add HEX number for input and colour picker.
+- Add HEX number for input.
   - Optional: swap the colour between background and foreground.
-- Data input validation
-- Render example with text size & color and background color visual in WCAG section.
+- Data input validation if allowing HEX numbere input
 - Componentise App.tsx.
-- Style it nicely 💕
 
 ## Calculating Relative Luminance
 

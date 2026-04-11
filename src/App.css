@@ -1,3 +1,12 @@
+h2 {
+  margin: 1rem 0;
+}
+
+.color-input {
+  display: flex;
+  gap: 2rem;
+}
+
 .wcag-table {
   border-collapse: collapse;
 }
