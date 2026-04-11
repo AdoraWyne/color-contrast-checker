@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 import { getLuminanceValue } from "./utils/getLuminanceValue";
 import { getContrastRatio } from "./utils/getContrastRatio";
 import { WCAGTest } from "./utils/WCAGTest";
@@ -64,7 +65,7 @@ function App() {
 
       <div>
         <h2>WCAG 2.0 Test</h2>
-        <table>
+        <table className="wcag-table">
           <thead>
             <tr>
               <th>WCAG 2.0</th>
