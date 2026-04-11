@@ -90,7 +90,9 @@ function App() {
                     {presentation.previewText}
                   </td>
                   <td>{row.minContrast}:1</td>
-                  <td>{row.passes ? "Yes" : "No"}</td>
+                  <td className={row.passes ? "pass" : "fail"}>
+                    {row.passes ? "Yes" : "No"}
+                  </td>
                 </tr>
               );
             })}
