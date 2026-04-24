@@ -1,3 +1,5 @@
+# Live Demo [here](https://color-contrast-checker.fly.dev/).
+
 # Goal
 
 - To understand how color contrast is calculated and the WCAG value for each color contrast.
